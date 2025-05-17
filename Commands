@@ -1,0 +1,18 @@
+Commandes utiles :
+si jamais j'ai juste le dockerfile et que je veux build l'image : docker build -t nomimage .
+si je veux créer un container : docker run --gpus all -it -p 8888:8888 -v "${PWD}:/app" -w /app --name nomcontainer nomimage
+avec:
+-gpus all pour donner accès au gpu dans le container
+-it pour ouvrir le terminal en mode docker
+-p 8888:8888 pour le port pour ensuite utiliser jupyter
+-v "${PWD}:/app" pour monter le dossier dans le container
+--name nomcontainer pour le nom
+nomimage le nom de l'image a utiliser pour le container
+
+lancer le container : docker start -ai nomcontainer
+avec : -ai pour lancer le terminal dans docker
+
+après quand c'est lancé je peux lancer ce que je veux
+si je veux lancer un jupyter (il faut que le port soit exposed): jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+
+ouvrir le terminal en mode container: docker exec -it nomcontainer bash

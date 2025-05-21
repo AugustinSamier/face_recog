@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     python3-tk \
     && pip install --upgrade pip
 
-RUN pip install dlib==19.18.0 face-recognition opencv-python notebook torch
+RUN pip install dlib==19.18.0 face-recognition opencv-python notebook torch torchvision scikit-learn
 EXPOSE 8888
 
 WORKDIR /app

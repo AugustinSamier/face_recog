@@ -4,3 +4,17 @@ Faces/*
 test/*
 train/*
 DataFaces/*
+__pycache__/*
+age_detection.csv
+avrpooling.jpg
+CAT.zip
+DataFaces.zip
+faceDetected.jpg
+maxpooled.jpg
+NewTest.jpg
+pairs.txt
+pairsDevTest.txt
+pairsDevTrain.txt
+Recog.py
+test.jpg
+test2.jpg
